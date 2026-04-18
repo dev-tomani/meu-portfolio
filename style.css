@@ -1,0 +1,355 @@
+/* Variáveis CSS para o Tema Escuro (Padrão) */
+:root {
+    --bg-primary: #0b1120; /* Azul escuro inspirado na imagem */
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #facc15; /* Dourado/Amarelo */
+    --accent-hover: #eab308;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Variáveis CSS para o Tema Claro */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-color: #ca8a04; /* Dourado um pouco mais escuro para contraste no fundo claro */
+    --accent-hover: #a16207;
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+/* Botão Padrão */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Header & Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--bg-primary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Seções Gerais */
+section {
+    padding: 100px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.hero-content .subtitle {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Sobre Section */
+.about-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.about-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin: 15px 0;
+}
+
+/* Projetos Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: rgba(250, 204, 21, 0.1);
+    color: var(--accent-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-link {
+    color: var(--text-primary);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+/* Contato Section */
+.contact-section {
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-content p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        flex-direction: column;
+        padding: 20px 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Esconde o menu */
+        transition: clip-path 0.3s ease-in-out;
+    }
+
+    nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Mostra o menu */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-image {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .about-row, .about-row.reverse {
+        flex-direction: column;
+    }
+}
